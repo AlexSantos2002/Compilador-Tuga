@@ -28,7 +28,7 @@ INT     : [0-9]+ ;
 DOUBLE  : [0-9]+ '.' [0-9]+ ;
 STRING  : '"' (~[\r\n"])* '"' ;
 
-// Coisas a ignorar
+// Coisas a ignorar (espaco e comentario)
 WS : [ \t\r\n]+ -> skip ; //ignorar espacos
 LINHA_DE_COMENTARIO : '//' .*? ('\n' | EOF) -> skip ;
 BLOCO_DE_COMENTARIO : '/*' .*? '*/' -> skip ;
